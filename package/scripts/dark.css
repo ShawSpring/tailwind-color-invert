@@ -1,5 +1,6 @@
-.dark:not(:where([class~="not-invert"],[class~="not-invert"] *)) {
+.dark {
 	color-scheme: dark;
+
 
 	--color-black: #fff;
 

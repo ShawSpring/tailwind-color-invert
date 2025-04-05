@@ -2,8 +2,5 @@
   "name": "invert-tailwind-colors",
   "version": "0.1.0",
   "private": true,
-  "scripts": {},
-  "devDependencies": {
-    "tailwindcss": "^4"
-  }
+  "scripts": {}
 }

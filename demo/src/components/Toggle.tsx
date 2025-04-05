@@ -4,7 +4,7 @@ function Toggle({
 }: { check: boolean; onChange?: () => void }) {
 	return (
 		<>
-			<label className="absolute top-4 right-4 flex w-16 h-8 border border-current/30 rounded-2xl cursor-pointer overflow-hidden">
+			<label className="relative flex w-16 h-8 border border-current/30 rounded-2xl cursor-pointer overflow-hidden">
 				<input
 					type="checkbox"
 					hidden

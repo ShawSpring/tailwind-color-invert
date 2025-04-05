@@ -1,14 +1,24 @@
 {
   "name": "tailwind-color-invert",
-  "version": "0.1.0",
+  "description": "a tailwind dark theme by inverting existing Tailwind color palette",
+  "keywords": ["tailwind", "dark", "theme", "nightwind"],
+  "version": "0.0.2",
   "private": false,
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".": "./dark.css"
+    ".": "./dark.css",
+    "./invert": {
+      "import":"./invert.js"
+    }
   },
+  "files": [
+    "dark.css",
+    "invert.js",
+    "README.md"
+  ],
   "scripts": {
-    "generate": "node invert.js"
+    "generate": "node scripts/generate.js"
   },
   "devDependencies": {
     "@types/node": "^20"

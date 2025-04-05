@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## tailwind-color-invert 
+**a tailwind dark theme** by inverting Tailwind intrinsic color palette 
+designed for **tailwindcss v4**, similar to [nightwind](https://nightwindcss.com/)
 
-First, run the development server:
+### what it does
+provides a css file that simplely invert shades and black/white, other colors will preserve as is;
+```css
+.dark { 
+	color-scheme: dark;
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+	--color-black: white;
+	--color-white: black;
+
+	--color-red-50: --color-red-950;
+	--color-red-100: --color-red-900;
+        ...
+	--color-red-900: --color-red-100;
+	--color-red-950: --color-red-50;
+}
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### usage
+in your css file that imports tailwindcss
+```diff
+@import "tailwindcss";
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
++ @import "tailwind-color-invert";
 
-## Learn More
++ @custom-variant dark (&:where(.dark, .dark *));
 
-To learn more about Next.js, take a look at the following resources:
+```
+dont forget to add `dark` class to your root element
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### invert your own color palette
+the invert function also exported so you can use it invert your color palette;
+```js
+import invert from "tailwind-color-invert/invert";
+invert();
+```
+<small>only provide ESM format</small>
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

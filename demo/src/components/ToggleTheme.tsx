@@ -8,9 +8,9 @@ function ToggleTheme() {
 		setIsDark(!isDark);
 	}
 	return (
-		<>
+		<div className="absolute top-2 right-4">
 			<Toggle check={isDark} onChange={handleToggle}></Toggle>
-		</>
+		</div>
 	);
 }
 
