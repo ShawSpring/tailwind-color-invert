@@ -1,0 +1,19 @@
+{
+  "name": "tailwind-color-invert",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./dark.css"
+  },
+  "scripts": {
+    "generate": "node invert.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^4.0.0"
+  }
+}

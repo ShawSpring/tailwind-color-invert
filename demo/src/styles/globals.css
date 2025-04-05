@@ -1,0 +1,10 @@
+@layer theme, base, components, utilities;
+/* @import "tailwindcss/theme.css" layer(theme); */
+/* * theme需要全量生成，const node_modules/tailwindcss 里拷贝出来，加上static */
+@import "./theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@import "tailwind-color-invert";
+
+@custom-variant dark (&:where(.dark, .dark *));
