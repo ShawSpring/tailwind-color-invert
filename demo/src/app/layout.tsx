@@ -18,7 +18,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 				<body className="bg-gray-50 text-gray-900">
-					<header className="w-full h-12 shadow flex items-center justify-center">
+					<header className="fixed top-0 bg-gray-100 w-full h-12 shadow flex items-center justify-center">
 						<nav>
 							<ul
 								className="flex font-semibold text-2xl *:px-4 md:*:px-8

@@ -2,10 +2,16 @@
   "name": "tailwind-color-invert",
   "description": "a tailwind dark theme by inverting existing Tailwind color palette",
   "keywords": ["tailwind", "dark", "theme", "nightwind"],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShawSpring/tailwind-color-invert.git",
+    "directory": "package"
+  },
+  "homepage": "https://github.com/ShawSpring/tailwind-color-invert/tree/main/package",
   "exports": {
     ".": "./dark.css",
     "./invert": {

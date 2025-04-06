@@ -5,15 +5,15 @@ const oppositePair = [["black", "white"]];
 // regex for color shades
 const regex_shades = /^\s.--color-([a-z]+)-(\d+):\s?(.*?)(?=;)/;
 const regex_other = /^\s.--color-([a-zA-Z]+)(?:-([a-zA-Z]+))?:\s?(.*?)(?=;)/;
- 
+
 /**
- * inverts theme.css and outputs dark.css 
- * @param {string} themePath 
- * @param {string} outputPath 
+ * inverts theme.css and outputs dark.css
+ * @param {string} themePath
+ * @param {string} outputPath
  * @default themePath = "./node_modules/tailwindcss/theme.css"
  * @default outputPath = "./dark.css"
  */
-export 	default async function invert(
+export default async function invert(
 	themePath = "./node_modules/tailwindcss/theme.css",
 	outputPath = "./dark.css",
 ) {
@@ -111,7 +111,9 @@ async function outputTheme(remainder, invertedColors, outputPath) {
 	try {
 		file = await fs.open(outputPath, "w");
 		// await file.write(".dark {\n");
-		await file.write(".dark:not(:where([class~=\"not-invert\"],[class~=\"not-invert\"] *)) {\n");
+		await file.write(
+			':where(.dark):not(:where([class~="not-invert"],[class~="not-invert"] *)) {\n',
+		);
 		await file.write("	color-scheme: dark;\n\n");
 
 		let i = 0;

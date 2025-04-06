@@ -6,7 +6,7 @@ designed for **tailwindcss v4**, similar to [nightwind](https://nightwindcss.com
 ### what it does
 provides a css file that simplely invert shades and black/white, other colors will preserve as is;
 ```css
-.dark { 
+:where(.dark):not(:where([class~="not-invert"],[class~="not-invert"] *)){
 	color-scheme: dark;
 
 	--color-black: white;
@@ -31,8 +31,8 @@ in your css file that imports tailwindcss
 
 + @custom-variant dark (&:where(.dark, .dark *));
 
-```
-dont forget to add `dark` class to your root element
+```  
+dont forget to add **dark** class to your root element  
 
 
 ### invert your own color palette
@@ -41,6 +41,6 @@ the invert function also exported so you can use it invert your color palette;
 import invert from "tailwind-color-invert/invert";
 invert();
 ```
-<small>only provide ESM format</small>
+only provide ESM format
 
 

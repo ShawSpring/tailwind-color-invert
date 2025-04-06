@@ -24,6 +24,9 @@
 				"useConst":"info",
 				"noUnusedTemplateLiteral":"off",
 				"useSelfClosingElements":"off"
+			},
+			"a11y":{
+				"noSvgWithoutTitle":"off"
 			}
 		}
 	},
