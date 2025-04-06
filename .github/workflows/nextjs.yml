@@ -28,7 +28,7 @@ concurrency:
 env:
   # BUILD_PATH: "." # default value when not using subfolders
   BUILD_PATH: demo
-  
+
 jobs:
   build:
     name: Build
@@ -44,6 +44,8 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4 
+        with:
+          version: 10.7.1 
       #version: 9.4.0 defined in package.json 
 
       - name: Setup Pages
