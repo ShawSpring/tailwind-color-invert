@@ -3,6 +3,8 @@
 **a tailwind dark theme** by inverting Tailwind intrinsic color palette 
 designed for **tailwindcss v4**, similar to [nightwind](https://nightwindcss.com/)
 
+see [demo](https://shawspring.github.io/tailwind-color-invert/) 
+
 ### what it does
 provides a css file that simplely invert shades and black/white, other colors will preserve as is;
 ```css

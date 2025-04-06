@@ -11,9 +11,9 @@
     "url": "https://github.com/ShawSpring/tailwind-color-invert.git",
     "directory": "package"
   },
-  "homepage": "https://github.com/ShawSpring/tailwind-color-invert/tree/main/package",
-  "exports": {
-    ".": "./dark.css",
+  "homepage": "https://shawspring.github.io/tailwind-color-invert/",
+  "exports": {  
+    ".": "./dark.css",  
     "./invert": {
       "import":"./invert.js"
     }
