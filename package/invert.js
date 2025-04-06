@@ -110,11 +110,8 @@ async function outputTheme(remainder, invertedColors, outputPath) {
 	let file;
 	try {
 		file = await fs.open(outputPath, "w");
-		// await file.write(".dark {\n");
-		await file.write(
-			':where(.dark):not(:where([class~="not-invert"],[class~="not-invert"] *)) {\n',
-		);
-		await file.write("	color-scheme: dark;\n\n");
+		await file.write(".dark {\n");
+		await file.write("	color-scheme: dark;\n");
 
 		let i = 0;
 		for (const color in remainder) {

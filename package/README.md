@@ -6,7 +6,7 @@ designed for **tailwindcss v4**, similar to [nightwind](https://nightwindcss.com
 ### what it does
 provides a css file that simplely invert shades and black/white, other colors will preserve as is;
 ```css
-:where(.dark):not(:where([class~="not-invert"],[class~="not-invert"] *)){
+.dark {
 	color-scheme: dark;
 
 	--color-black: white;

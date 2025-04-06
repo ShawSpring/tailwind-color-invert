@@ -19,10 +19,11 @@ import ReactMarkdown from "react-markdown";
 
 const Readme = () => {
 	return (
-		<article className="prose prose-slate dark:prose-invert lg:prose-xl mx-auto">
+		<article className="prose prose-slate dark:prose-invert prose-sm lg:prose-base mx-auto my-6 max-w-[78ch]">
 			<ReactMarkdown
 				components={{
-					pre: ({ children }) => <p className="not-prose  *:rounded-md *:border-1  *:border-gray-400 *:shadow-xl">{children}</p>,
+					pre: ({ children }) => <div className="not-prose  *:rounded-md *:border-1  *:border-gray-400 *:shadow-xl">{children}</div>,
+					//@ts-ignore
 					code({ children, className, inline }) {
 						// 匹配否指定语言
 						const match: any = /language-(\w+)/.exec(className || "");
@@ -31,7 +32,7 @@ const Readme = () => {
 								{!inline ? (
 									<Highlighter language={match?.[1]}>{children}</Highlighter>
 								) : (
-									<code className={className} style={inlineCodeStyle}>
+									<code className={className}>
 										{children}
 									</code>
 								)}

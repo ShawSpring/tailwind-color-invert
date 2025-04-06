@@ -24,7 +24,8 @@
     "README.md"
   ],
   "scripts": {
-    "generate": "node scripts/generate.js"
+    "generate": "node scripts/generate.js",
+    "prepublishOnly": "pnpm run generate"
   },
   "devDependencies": {
     "@types/node": "^20"

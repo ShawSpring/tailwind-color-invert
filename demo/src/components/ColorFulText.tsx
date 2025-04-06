@@ -1,3 +1,4 @@
+
 const shuffle = (array: string[]) => [...array].sort(() => Math.random() - 0.5);
 
 function ColorFulText({ text }: { text: string }) {
@@ -13,7 +14,10 @@ function ColorFulText({ text }: { text: string }) {
 		<>
 			{Array.from(text).map((char, i) => {
 				return (
-					<span key={i} className={shuffle(colors)[i % colors.length]}>
+					// Hydration failed because the server rendered HTML didn't match the client
+					// 抑制水合警告
+					<span key={i} suppressHydrationWarning={true} 
+					className={shuffle(colors)[i % colors.length]}>
 						{char}
 					</span>
 				);

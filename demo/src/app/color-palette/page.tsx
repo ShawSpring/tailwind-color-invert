@@ -51,7 +51,7 @@ export default function ColorPalette() {
 					/>
 				</div>
 				<div
-					className="sticky top-4 z-9 col-start-2 grid grid-cols-11 justify-items-center gap-2 font-medium
+					className="sticky top-12 z-9 col-start-2 grid grid-cols-11 justify-items-center gap-2 font-medium
 					  *:rotate-180 *:[writing-mode:vertical-lr] bg-gray-50
 	       py-2 max-sm:py-1 sm:gap-4 sm:*:rotate-0 sm:*:[writing-mode:horizontal-tb] "
 				>

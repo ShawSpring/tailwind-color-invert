@@ -2,5 +2,8 @@
   "name": "invert-tailwind-colors",
   "version": "0.1.0",
   "private": true,
-  "scripts": {}
+  "scripts": {
+    "preview":"pnpm --filter=demo run dev",
+    "build":"pnpm --filter=tailwind-color-invert run generate && pnpm --filter=demo run build"
+  }
 }
