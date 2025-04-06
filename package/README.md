@@ -25,6 +25,11 @@ provides a css file that simplely invert shades and black/white, other colors wi
 
 
 ### usage
+
+```bash
+npm install tailwind-color-invert
+```
+
 in your css file that imports tailwindcss
 ```diff
 @import "tailwindcss";
