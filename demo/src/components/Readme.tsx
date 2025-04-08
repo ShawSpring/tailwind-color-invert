@@ -24,7 +24,7 @@ const Readme = () => {
 				
 				components={{
 					pre: ({ children }) => <div className="not-prose  *:rounded-md *:border-1  *:border-gray-400 *:shadow-xl">{children}</div>,
-					//@ts-ignore
+					//@ts-expect-error
 					code({ children, className, inline }) {
 						// 匹配否指定语言
 						const match: any = /language-(\w+)/.exec(className || "");

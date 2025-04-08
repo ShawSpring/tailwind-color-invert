@@ -336,7 +336,7 @@ export const Color = memo(function Color({
 						onClick={copyHexToClipboard}
 						style={{
 							backgroundColor: `var(${colorVariableName})`,
-							//@ts-ignore
+							//@ts-expect-error
 							"--tw-ring-color": `currentColor`,
 						}}
 						className={clsx(
