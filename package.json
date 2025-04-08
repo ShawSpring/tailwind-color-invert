@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "preview":"pnpm --filter=demo run dev",
-    "build":"pnpm --filter=tailwind-color-invert run generate && pnpm --filter=demo run build"
+    "build":"pnpm --filter=tailwind-color-invert run generate && pnpm --filter=demo run build",
+    "generate":"pnpm --filter=tailwind-color-invert run generate"
   }
 }

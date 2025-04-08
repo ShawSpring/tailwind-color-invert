@@ -34,15 +34,16 @@ in your css file that imports tailwindcss
 ```diff
 @import "tailwindcss";
 
-+ @import "tailwind-color-invert";
++ @import "tailwind-color-invert" layer(theme);  
 
 + @custom-variant dark (&:where(.dark, .dark *));
 
 ```  
 dont forget to add **dark** class to your root element  
 
-
+ 
 ### invert your own color palette
+
 the invert function also exported so you can use it invert your color palette;
 ```js
 import invert from "tailwind-color-invert/invert";

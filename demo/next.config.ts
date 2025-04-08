@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 
 
-
-
 const nextConfig: NextConfig = {
   /* config options here */
   // 配置参考 https://juejin.cn/post/7446951664816193551
