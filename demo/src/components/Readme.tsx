@@ -2,8 +2,6 @@
 import fs from "node:fs";
 import path from "node:path";
 
-import { remark } from "remark";
-import remarkHtml from "remark-html";
 
 import Highlighter from "./Highlighter";
 

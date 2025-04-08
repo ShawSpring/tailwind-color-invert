@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Readme from "@/components/Readme";
 
 export default function Home() {

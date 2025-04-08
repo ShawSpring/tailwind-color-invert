@@ -5,7 +5,7 @@ function ToggleTheme() {
 	const [isDark, setIsDark] = useState(() => {
 		return typeof window !== "undefined"
 			? document.documentElement.classList.contains("dark")
-			: "dark";
+			: true;
 	});
 
 	function handleToggle(e: React.ChangeEvent<HTMLInputElement>) {

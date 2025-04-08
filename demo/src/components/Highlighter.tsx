@@ -50,7 +50,7 @@ function Highlighter({
 				<SyntaxHighlighter
 					showLineNumbers={true}
 					customStyle={{
-						animation: "fade-in .5s ease-out",
+						animation: "fade-in .3s ease-out",
 					}}
 					language={language}
 					style={dark ? oneDark : oneLight}

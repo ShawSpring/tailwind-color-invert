@@ -17,8 +17,6 @@
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",
     "react-syntax-highlighter": "^15.6.1",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1",
     "tailwind-color-invert": "workspace:*"
   },
   "devDependencies": {
@@ -27,6 +25,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
