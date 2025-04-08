@@ -6,6 +6,12 @@ import { remark } from "remark";
 import remarkHtml from "remark-html";
 
 import Highlighter from "./Highlighter";
+
+// 在 ES 模块中
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+
+
 // 读取 Markdown 文件
 const filePath = path.join(process.cwd(), "../package/README.md");
 const fileContent = fs.readFileSync(filePath, "utf8");  

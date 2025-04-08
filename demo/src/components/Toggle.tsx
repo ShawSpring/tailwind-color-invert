@@ -1,14 +1,17 @@
+
 function Toggle({
 	check,
 	onChange,
-}: { check: boolean; onChange?: () => void }) {
+	onClick
+}: { check: boolean; onChange?: React.ChangeEventHandler<HTMLInputElement>, onClick?: React.MouseEventHandler<HTMLInputElement> }) {
 	return (
 		<>
 			<label className="relative flex w-16 h-8 border border-current/30 rounded-2xl cursor-pointer overflow-hidden">
 				<input
 					type="checkbox"
-					hidden
+					style={{visibility:"hidden"}}
 					className="peer"
+					onClick={onClick}
 					checked={check}
 					onChange={onChange}
 				/>
