@@ -1,19 +1,28 @@
 @layer theme, base, components, utilities;
 
-@import "tailwind-color-invert" layer(theme);  
- 
+
 /* @import "tailwindcss/theme.css" layer(theme); */
 /* * theme需要全量生成，const node_modules/tailwindcss 里拷贝出来，加上static */
 @import "./theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+@import "tailwind-color-invert";  
 
 
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
 ::view-transition-old(root),
 ::view-transition-new(root) {

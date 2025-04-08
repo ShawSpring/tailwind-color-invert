@@ -1,10 +1,10 @@
 
 ## tailwind-color-invert 
-**a tailwind dark theme** by inverting Tailwind intrinsic color palette 
+**a tailwind dark theme** by inverting Tailwind intrinsic color palette .  
 designed for **tailwindcss v4**, similar to [nightwind](https://nightwindcss.com/)
 
-see [demo](https://shawspring.github.io/tailwind-color-invert/) 
-
+see [demo](https://shawspring.github.io/tailwind-color-invert/color-palette) 
+  
 ### what it does
 provides a css file that simplely invert shades and black/white, other colors will preserve as is;
 ```css
@@ -34,14 +34,16 @@ in your css file that imports tailwindcss
 ```diff
 @import "tailwindcss";
 
-+ @import "tailwind-color-invert" layer(theme);  
++ @import "tailwind-color-invert";
 
-+ @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 ```  
-dont forget to add **dark** class to your root element  
+somewhere in your jsx
+```js
+document.documentElement.classList.toggle("dark");
+``` 
 
- 
 ### invert your own color palette
 
 the invert function also exported so you can use it invert your color palette;

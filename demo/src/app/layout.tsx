@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 
+import Head from "next/head";
 
-
+import Script from "next/script";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -15,13 +16,24 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-
 	return (
-		<html lang="en">
-				<body className="bg-gray-50 text-gray-900">
-			<Header/>
-					{children}
-				</body>
+		/* 客户端会多一个 class="dark" 导致不一致 */
+		<html lang="en" suppressHydrationWarning={true}>
+			<head>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+					(function() {
+						const theme = localStorage.getItem('theme') || 'dark';
+						document.documentElement.classList.add(theme==='dark' ? 'dark' : '');
+      		        })();`,
+					}}
+				></script>
+			</head>
+			<body className="bg-gray-50 text-gray-900">
+				<Header />
+				{children}
+			</body>
 		</html>
 	);
 }
